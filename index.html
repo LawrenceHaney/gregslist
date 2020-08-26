@@ -68,6 +68,44 @@
                 </div>
             </div> -->
         </section>
+        <section class="row">
+            <div class="col-12">
+                <form class="form-inline" onsubmit="app.homesController.createHome()">
+                    <div class="form-group">
+                        <label for="address"></label>
+                        <input type="text" name="address" id="address" class="form-control" placeholder="address...." >
+                    </div>
+                    <div class="form-group">
+                        <label for="beds"></label>
+                        <input type="text" name="beds" id="beds" class="form-control" placeholder="beds...." >
+                    </div>
+                    <div class="form-group">
+                        <label for="baths"></label>
+                        <input type="text" name="baths" id="baths" class="form-control" placeholder="baths...." >
+                    </div>
+                    <div class="form-group">
+                        <label for="foots"></label>
+                        <input type="text" name="foots" id="foots" class="form-control" placeholder="foots...." >
+                    </div>
+                    <div class="form-group">
+                        <label for="discription"></label>
+                        <input type="text" name="discription" id="discription" class="form-control" placeholder="discription...." >
+                    </div>
+                    <div class="form-group">
+                        <label for="image"></label>
+                        <input type="text" name="image" id="image" class="form-control" placeholder="image...." >
+                    </div>
+                    <div class="form-group">
+                        <label for="price"></label>
+                        <input type="text" name="price" id="price" class="form-control" placeholder="price...." >
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">List Home</button>
+                </form>
+            </div>
+        </section>
+        <section class="row" id="homes">
+
+        </section>
     </main>
     <footer class="container-fluid bg-primary">
         <div class="row">

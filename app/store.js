@@ -1,5 +1,6 @@
 import Car from "./Models/Car.js";
-console.log(1);
+import home from "./Models/Homes.js";
+import Home from "./Models/Homes.js";
 
 let _state = {
   /** @type {Car[]} */
@@ -8,7 +9,11 @@ let _state = {
     new Car({ make: "Mystery", model: "Machine", year: 1987, price: 1000, img: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/the-classic-mystery-machine-replica-van-built-by-jerry-news-photo-1587131341.jpg?crop=1.00xw:0.753xh;0,0.176xh&resize=1200:*", description: "Smells like meddling teenagers and a dog" }),
     new Car({ make: "Jeep", model: "Wrangler", year: 1987, price: 1000, img: "https://vignette.wikia.nocookie.net/jurassicpark/images/e/e7/Jurassic-park-jeep3-1-.jpg/revision/latest/scale-to-width-down/340?cb=20090417212624", description: "Are those teeth marks?" })
   ],
-  houses: []
+  homes: [
+    new Home({address: "1234 anystreet", beds: 4, baths: 2, foots: 1000, discription: "some words", image: "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", price: 10000}),
+    new Home({address: "1234 road road", beds: 5, baths: 1, foots: 1000, discription: "some more words", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", price: 10000}),
+    new Home({address: "1234 your street", beds: 1, baths: 2, foots: 1000, discription: "less words", image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", price: 10000})
+  ]
 };
 
 class Store {
