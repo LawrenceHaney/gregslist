@@ -25,7 +25,7 @@ export default class Home {
               <div class="d-flex justify-content-between">
                   <p>$${this.price.toFixed(2)}</p>
               </div>
-              <button class="button" onclick="app.homesController.removeHome('${this.id}')"> bye</button>
+              <button class="btn btn-secondary" onclick="app.homesController.removeHome('${this.id}')"> bye</button>
           </div>
       </div>
     </div>`
