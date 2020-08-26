@@ -12,3 +12,14 @@ main {
 .text-shadow {
   filter: drop-shadow(3px 4px 3px black)
 }
+
+.box-shadow{
+  box-shadow: .25em .25em
+}
+
+.list-obj{
+  background-color: var(--light);
+}
+
+
+

@@ -15,7 +15,7 @@ export default class Home {
   get Template() {
     return `            
     <div class="col-4">
-      <div class="card">
+      <div class="card box-shadow list-obj">
           <img class="card-img-top" src="${this.image}" alt="">
           <div class="card-body">
               <h3 class="card-title">${this.address}</h3>
