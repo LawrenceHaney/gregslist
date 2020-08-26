@@ -1,6 +1,6 @@
 import Car from "./Models/Car.js";
-import home from "./Models/Homes.js";
 import Home from "./Models/Homes.js";
+import Job from "./Models/Job.js"
 
 let _state = {
   /** @type {Car[]} */
@@ -13,6 +13,9 @@ let _state = {
     new Home({address: "1234 anystreet", beds: 4, baths: 2, foots: 1000, discription: "some words", image: "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", price: 10000}),
     new Home({address: "1234 road road", beds: 5, baths: 1, foots: 1000, discription: "some more words", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", price: 10000}),
     new Home({address: "1234 your street", beds: 1, baths: 2, foots: 1000, discription: "less words", image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", price: 10000})
+  ],
+  jobs: [
+    new Job({title: "Keyboard Monkey", location: "Anytown, USA", rate:"enough", contact:"(208)555-5555", discription: "can you write the next Hamlet?", image:"https://images.unsplash.com/photo-1555492217-7bb078f32c8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80"})
   ]
 };
 
