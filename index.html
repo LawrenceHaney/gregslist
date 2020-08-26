@@ -19,93 +19,112 @@
         </div>
     </header>
     <main class="container" id="main">
-        <section class="row my-3">
-            <div class="col">
-                <form onsubmit="app.carsController.createCar()" class="form-inline">
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="make">Make</label>
-                        <input type="text" name="make" id="make" class="form-control" placeholder="Make...">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="car-tab" data-toggle="tab" href="#car-data" role="tab" aria-controls="home" aria-selected="true">Cars</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="homes-tab" data-toggle="tab" href="#homes-data" role="tab" aria-controls="homes" aria-selected="false">Homes</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Jobs</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="car-data" role="tabpanel" aria-labelledby="home-tab">
+                <section class="row my-3">
+                    <div class="col">
+                        <form onsubmit="app.carsController.createCar()" class="form-inline">
+                            <div class="form-group p-1">
+                                <label class="mr-1" for="make">Make</label>
+                                <input type="text" name="make" id="make" class="form-control" placeholder="Make...">
+                            </div>
+                            <div class="form-group p-1">
+                                <label class="mr-1" for="model">Model</label>
+                                <input type="text" name="model" id="model" class="form-control" placeholder="Model...">
+                            </div>
+                            <div class="form-group p-1">
+                                <label class="mr-1" for="year">Year</label>
+                                <input type="number" name="year" id="year" class="form-control" placeholder="Year..." min="1900"
+                                    max="2021">
+                            </div>
+                            <div class="form-group p-1">
+                                <label class="mr-1" for="price">Price</label>
+                                <input type="number" name="price" id="price" class="form-control" placeholder="Price...">
+                            </div>
+                            <div class="form-group p-1">
+                                <label class="mr-1" for="description">Description</label>
+                                <input type="text" name="description" id="description" class="form-control"
+                                    placeholder="Description...">
+                            </div>
+                            <div class="form-group p-1">
+                                <label class="mr-1" for="img">Image Url</label>
+                                <input type="url" name="img" id="img" class="form-control" placeholder="Image Url...">
+                            </div>
+                            <button type="submit" class="btn btn-outline-success">Add Car</button>
+                        </form>
                     </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="model">Model</label>
-                        <input type="text" name="model" id="model" class="form-control" placeholder="Model...">
-                    </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="year">Year</label>
-                        <input type="number" name="year" id="year" class="form-control" placeholder="Year..." min="1900"
-                            max="2021">
-                    </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="price">Price</label>
-                        <input type="number" name="price" id="price" class="form-control" placeholder="Price...">
-                    </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="description">Description</label>
-                        <input type="text" name="description" id="description" class="form-control"
-                            placeholder="Description...">
-                    </div>
-                    <div class="form-group p-1">
-                        <label class="mr-1" for="img">Image Url</label>
-                        <input type="url" name="img" id="img" class="form-control" placeholder="Image Url...">
-                    </div>
-                    <button type="submit" class="btn btn-outline-success">Add Car</button>
-                </form>
-            </div>
-        </section>
-        <section class="row" id="cars">
-            <!-- <div class="col-4">
-                <div class="card">
-                    <img class="card-img-top" src="//placehold.it/200x200" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">MAKE - MODEL - YEAR</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae illum esse
-                            error velit! Quod doloremque soluta ex ipsum iste perferendis saepe, nisi, repudiandae eos
-                            error neque obcaecati accusamus at provident!</p>
-                        <div class="text-right">
-                            <p>PRICE</p>
+                </section>
+                <section class="row" id="cars">
+                    <!-- <div class="col-4">
+                        <div class="card">
+                            <img class="card-img-top" src="//placehold.it/200x200" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">MAKE - MODEL - YEAR</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae illum esse
+                                    error velit! Quod doloremque soluta ex ipsum iste perferendis saepe, nisi, repudiandae eos
+                                    error neque obcaecati accusamus at provident!</p>
+                                <div class="text-right">
+                                    <p>PRICE</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div> -->
-        </section>
-        <section class="row">
-            <div class="col-12">
-                <form class="form-inline" onsubmit="app.homesController.createHome()">
-                    <div class="form-group">
-                        <label for="address"></label>
-                        <input type="text" name="address" id="address" class="form-control" placeholder="address...." >
-                    </div>
-                    <div class="form-group">
-                        <label for="beds"></label>
-                        <input type="text" name="beds" id="beds" class="form-control" placeholder="beds...." >
-                    </div>
-                    <div class="form-group">
-                        <label for="baths"></label>
-                        <input type="text" name="baths" id="baths" class="form-control" placeholder="baths...." >
-                    </div>
-                    <div class="form-group">
-                        <label for="foots"></label>
-                        <input type="text" name="foots" id="foots" class="form-control" placeholder="foots...." >
-                    </div>
-                    <div class="form-group">
-                        <label for="discription"></label>
-                        <input type="text" name="discription" id="discription" class="form-control" placeholder="discription...." >
-                    </div>
-                    <div class="form-group">
-                        <label for="image"></label>
-                        <input type="text" name="image" id="image" class="form-control" placeholder="image...." >
-                    </div>
-                    <div class="form-group">
-                        <label for="price"></label>
-                        <input type="text" name="price" id="price" class="form-control" placeholder="price...." >
-                    </div>
-                    <button type="submit" class="btn btn-outline-success">List Home</button>
-                </form>
+                    </div> -->
+                </section>
             </div>
-        </section>
-        <section class="row" id="homes">
-
-        </section>
+            <div class="tab-pane fade" id="homes-data" role="tabpanel" aria-labelledby="profile-tab">
+                <section class="row">
+                    <div class="col-12">
+                        <form class="form-inline" onsubmit="app.homesController.createHome()">
+                            <div class="form-group">
+                                <label for="address"></label>
+                                <input type="text" name="address" id="address" class="form-control" placeholder="address...." >
+                            </div>
+                            <div class="form-group">
+                                <label for="beds"></label>
+                                <input type="text" name="beds" id="beds" class="form-control" placeholder="beds...." >
+                            </div>
+                            <div class="form-group">
+                                <label for="baths"></label>
+                                <input type="text" name="baths" id="baths" class="form-control" placeholder="baths...." >
+                            </div>
+                            <div class="form-group">
+                                <label for="foots"></label>
+                                <input type="text" name="foots" id="foots" class="form-control" placeholder="foots...." >
+                            </div>
+                            <div class="form-group">
+                                <label for="discription"></label>
+                                <input type="text" name="discription" id="discription" class="form-control" placeholder="discription...." >
+                            </div>
+                            <div class="form-group">
+                                <label for="image"></label>
+                                <input type="text" name="image" id="image" class="form-control" placeholder="image...." >
+                            </div>
+                            <div class="form-group">
+                                <label for="price"></label>
+                                <input type="text" name="price" id="price" class="form-control" placeholder="price...." >
+                            </div>
+                            <button type="submit" class="btn btn-outline-success">List Home</button>
+                        </form>
+                    </div>
+                </section>
+                <section class="row" id="homes">
+                </section>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    comming soon
+            </div>
+          </div>
     </main>
     <footer class="container-fluid bg-primary">
         <div class="row">
@@ -116,6 +135,7 @@
     </footer>
 
     <script src="app/main.js" type="module"></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script> <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script> <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
 </body>
 
 </html>
